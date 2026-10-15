@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    @apply bg-white text-slate-900 transition-colors duration-200;
+    @apply dark:bg-slate-900 dark:text-white;
+  }
+
+  #root {
+    min-height: 100vh;
+    @apply bg-white dark:bg-slate-900;
+  }
+
+  input,
+  textarea,
+  select {
+    color: inherit;
+  }
+}
